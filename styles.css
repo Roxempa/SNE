@@ -27,7 +27,7 @@ header {
 header nav {
     display: flex;
     align-items: center; /* Alinea los elementos verticalmente */
-    justify-content: space-between; /* Espacio entre logo y enlaces */
+    justify-content: center; /* Centra los enlaces en el contenedor */
     padding: 0 20px; /* Añadir algo de espacio en los laterales */
 }
 
@@ -84,23 +84,9 @@ main {
 
 /* Diseño responsivo para pantallas pequeñas */
 @media (max-width: 600px) {
-    header nav {
-        flex-direction: column; /* Cambiar la dirección de los elementos a columna */
-        align-items: flex-start; /* Alinear los elementos al principio */
-        padding: 10px; /* Añadir un poco de espacio alrededor */
-    }
-
-    header nav .logo-container {
-        position: static; /* Cambiar para evitar el posicionamiento absoluto */
-        margin-bottom: 10px; /* Añadir espacio debajo del logo */
-    }
-
-    header nav ul {
-        display: flex;
-        flex-direction: column; /* Colocar los enlaces en columna */
-        align-items: center; /* Centrar los enlaces horizontalmente */
-        gap: 10px; /* Espacio de 10px entre los enlaces */
-        margin-top: 10px; /* Espacio superior */
+    header nav ul li {
+        display: block;
+        margin-bottom: 10px;
     }
 
     header nav ul li a {

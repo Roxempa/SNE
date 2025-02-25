@@ -1,0 +1,144 @@
+/* Establecer variables para los colores */
+:root {
+    --color-fondo: #333;
+    --color-texto: white;
+    --color-nav: #4B0082;
+    --color-hover: #FF69B4; /* Verde más brillante para el hover */
+	--color-nav-start: #4B0082; /* Morado oscuro al inicio */
+    --color-nav-1: #6A0DAD; /* Tono de morado más brillante */
+    --color-nav-2: #800080; /* Morado clásico */
+    --color-nav-3: #9932CC; /* Morado claro */
+    --color-nav-4: #A3A3FF; /* Morado pastel */
+    --color-nav-5: #B0B0FF; /* Morado pálido */
+    --color-nav-6: #8A2BE2; /* Tono púrpura */
+    --color-nav-7: #9370DB; /* Púrpura intermedio */
+    --color-nav-8: #7B68EE; /* Azul violeta */
+    --color-nav-end: #0000FF; /* Azul al final */
+}
+
+/* Establecer un fondo gris oscuro para toda la página */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Mejora la legibilidad con un mejor espaciado entre líneas */
+    letter-spacing: 0.5px; /* Añade un pequeño espaciado entre los caracteres */
+}
+
+/* Barra de navegación en la parte superior */
+header {
+   background: linear-gradient(45deg, var(--color-nav-start), var(--color-nav-1), var(--color-nav-2), var(--color-nav-3), var(--color-nav-4), var(--color-nav-5), var(--color-nav-6), var(--color-nav-7), var(--color-nav-8), var(--color-nav-end));
+    animation: gradientAnimation 1s infinite alternate;
+    padding: 10px 0; /* Reducir el tamaño de la barra */
+}
+
+/* Animación para el degradado */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(45deg, #4B0082, #6A0DAD, #800080, #9932CC, #A3A3FF, #B0B0FF, #8A2BE2, #9370DB, #7B68EE, #0000FF);
+    }
+    20% {
+        background: linear-gradient(45deg, #6A0DAD, #800080, #9932CC, #A3A3FF, #B0B0FF, #8A2BE2, #9370DB, #7B68EE, #0000FF, #4B0082);
+    }
+    40% {
+        background: linear-gradient(45deg, #800080, #9932CC, #A3A3FF, #B0B0FF, #8A2BE2, #9370DB, #7B68EE, #0000FF, #4B0082, #6A0DAD);
+    }
+    60% {
+        background: linear-gradient(45deg, #9932CC, #A3A3FF, #B0B0FF, #8A2BE2, #9370DB, #7B68EE, #0000FF, #4B0082, #6A0DAD, #800080);
+    }
+    80% {
+        background: linear-gradient(45deg, #A3A3FF, #B0B0FF, #8A2BE2, #9370DB, #7B68EE, #0000FF, #4B0082, #6A0DAD, #800080, #9932CC);
+    }
+    100% {
+        background: linear-gradient(45deg, #4B0082, #6A0DAD, #800080, #9932CC, #A3A3FF, #B0B0FF, #8A2BE2, #9370DB, #7B68EE, #0000FF);
+    }
+}
+
+/* Barra de navegación: Alinear los elementos */
+header nav {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    justify-content: center; /* Centra los enlaces en el contenedor */
+    padding: 0 20px; /* Añadir algo de espacio en los laterales */
+}
+
+/* Contenedor del logo: Alineado a la izquierda */
+.logo-container {
+    position: absolute;
+    left: 20px; /* Alinea el logo al borde izquierdo */
+}
+
+/* Estilo para el logo */
+header nav .logo {
+    width: 40px; /* Tamaño del logo */
+    height: 40px; /* Ajusta la altura al mismo tamaño que el ancho para hacerlo circular */
+    border-radius: 50%; /* Hacer que el logo sea circular */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción dentro del círculo */
+}
+
+/* Barra de navegación: Centrar los enlaces */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    gap: 15px; /* Espacio de 15px entre los enlaces */
+}
+
+/* Estilo para los elementos de la lista */
+header nav ul li {
+    display: inline;
+}
+
+/* Estilo para los enlaces de la barra de navegación */
+header nav ul li a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.5; /* Asegura que el texto esté centrado verticalmente */
+    letter-spacing: 0.5px; /* Añade un pequeño espaciado entre los caracteres */
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    color: var(--color-hover);
+}
+
+/* Estilo para el contenido principal */
+main {
+    padding: 20px;
+    text-align: center;
+    line-height: 1.8; /* Mejor espaciado para el texto del contenido */
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Apila los elementos en vertical en móviles */
+        align-items: center;
+        padding: 15px 10px; /* Aumentar un poco el padding para mejor separación */
+    }
+
+    .logo-container {
+        margin-bottom: 15px; /* Añade espacio entre el logo y los enlaces */
+    }
+
+    .nav-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    header nav ul {
+        gap: 8px; /* Espaciado entre los enlaces en móvil */
+    }
+
+    header .logo {
+        width: 50px; /* Aumenta un poco el tamaño del logo en móvil */
+        height: 50px;
+    }
+}

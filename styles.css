@@ -321,35 +321,41 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px 0;
+        padding: 15px 0;
         position: relative;
     }
 
     .logo-container {
         position: absolute;
-        left: 10px; /* Asegura que el logo quede alineado a la izquierda */
+        left: 10px; /* Mantiene el logo alineado a la izquierda */
         top: 50%;
         transform: translateY(-50%);
     }
 
     .nav-container {
+        width: 100%;
         display: flex;
         justify-content: center;
-        width: 100%;
-        margin-top: 10px; /* Agrega espacio para evitar que el logo y los enlaces se solapen */
+        margin-top: 5px; /* Ajusta la separación entre el logo y los enlaces */
     }
 
     header nav ul {
         display: flex;
+        flex-direction: row; /* Mantiene los enlaces en línea */
         justify-content: center;
-        flex-wrap: wrap; /* Permite que los enlaces se acomoden mejor en pantallas pequeñas */
-        gap: 8px; /* Espaciado entre los enlaces */
+        align-items: center;
+        flex-wrap: wrap; /* Permite que los enlaces se acomoden si hay poco espacio */
+        gap: 10px; /* Aumenta el espaciado entre los enlaces */
         padding: 0;
         margin: 0;
     }
 
+    header nav ul li {
+        display: inline-block;
+    }
+
     header .logo {
-        width: 30px; /* Tamaño del logo en móvil */
-        height: 30px;
+        width: 40px; /* Ajusta el tamaño del logo */
+        height: 40px;
     }
 }

@@ -275,32 +275,81 @@ main {
     max-height: 300px;
     width: auto;
     height: auto;
+
+border: 5px solid #b528c6; /* Morado oscuro (el primer color del gradiente) */
+    border-radius: 10px; /* Opcional: esquinas redondeadas */
+}
+
+.boton-inscripcion {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #3b0079; /* Morado oscuro */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.boton-inscripcion:hover {
+    background-color: #5e0092; /* Morado más claro para el hover */
+}
+
+form {
+    font-size: 16px;
+}
+
+#opciones-alquiler {
+    margin-top: 10px;
+}
+
+select {
+    font-size: 16px;
+    padding: 5px;
+}
+
+/* Centrar el texto del footer */
+footer {
+    text-align: center;
 }
 
 /* Diseño responsivo para pantallas pequeñas */
 @media (max-width: 600px) {
     header {
-        flex-direction: column; /* Apila los elementos en vertical en móviles */
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        padding: 15px 10px; /* Aumentar un poco el padding para mejor separación */
+        padding: 15px 0;
+        position: relative;
     }
 
     .logo-container {
-        margin-bottom: 15px; /* Añade espacio entre el logo y los enlaces */
+        position: absolute;
+        left: 10px; /* Asegura que el logo quede alineado a la izquierda */
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .nav-container {
-        width: 100%;
         display: flex;
         justify-content: center;
+        width: 100%;
+        margin-top: 10px; /* Agrega espacio para evitar que el logo y los enlaces se solapen */
     }
 
     header nav ul {
-        gap: 8px; /* Espaciado entre los enlaces en móvil */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Permite que los enlaces se acomoden mejor en pantallas pequeñas */
+        gap: 8px; /* Espaciado entre los enlaces */
+        padding: 0;
+        margin: 0;
     }
 
     header .logo {
-        width: 50px; /* Aumenta un poco el tamaño del logo en móvil */
-        height: 50px;
+        width: 45px; /* Tamaño del logo en móvil */
+        height: 45px;
     }
 }

@@ -349,7 +349,7 @@ footer {
     }
 
     header .logo {
-        width: 45px; /* Tamaño del logo en móvil */
-        height: 45px;
+        width: 30px; /* Tamaño del logo en móvil */
+        height: 30px;
     }
 }
